@@ -303,7 +303,7 @@ namespace CSharp.EstruturaSequencial
             nome2 = vetorUser2[0];
             idade2 = int.Parse(vetorUser2[1]);
 
-            media = (idade1 + idade2) / 2.0;
+            media = (double) (idade1 + idade2) / 2.0;
 
             Console.WriteLine($"A idade média de {nome1} e {nome2} é de {media.ToString("F1")} anos");
 

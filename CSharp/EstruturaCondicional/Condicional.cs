@@ -8,39 +8,35 @@ namespace CSharp.EstruturaCondicional
 {
     public class Condicional
     {
-        public static void ExParaleloEC(string[] args)
+        public static void ExParaleloEC()
         {
             double notaPrimeiroSemestre, notaSegundoSemestre, mediaTotal;
 
-            Console.WriteLine("DIGITE SUA NOTA DO PRIMEIRO SEMESTRE: ");
-
-            notaPrimeiroSemestre = double.Parse(Console.ReadLine());
-
-            if (notaPrimeiroSemestre == null)
+            Console.Write("DIGITE SUA NOTA DO PRIMEIRO SEMESTRE: ");
+            while (!double.TryParse(Console.ReadLine(), out notaPrimeiroSemestre))
             {
-                Console.WriteLine("DIGITE SUA NOTA!!");
+                Console.Write("ENTRADA INVÁLIDA! DIGITE UM NÚMERO VÁLIDO: ");
             }
 
-            Console.WriteLine("DIGITE SUA NOTA DO SEGUNDO SEMESTRE: ");
-
-            notaSegundoSemestre = double.Parse(Console.ReadLine());
-
-            if (notaSegundoSemestre == null)
+            Console.Write("DIGITE SUA NOTA DO SEGUNDO SEMESTRE: ");
+            while (!double.TryParse(Console.ReadLine(), out notaSegundoSemestre))
             {
-                Console.WriteLine("DIGITE SUA NOTA!!");
+                Console.Write("ENTRADA INVÁLIDA! DIGITE UM NÚMERO VÁLIDO: ");
             }
 
             mediaTotal = (notaPrimeiroSemestre + notaSegundoSemestre) / 2.0;
 
+            Console.WriteLine($"SUA NOTA FINAL FOI {mediaTotal:F1}");
+
             if (mediaTotal > 60.0)
             {
-                Console.WriteLine($"SUA NOTA FINAL FOI {mediaTotal.ToString("F1")} PARABÉNS VOCÊ PASSOU!!");
+                Console.WriteLine("PARABÉNS! VOCÊ PASSOU!!");
             }
             else
             {
-                Console.WriteLine($"SUA NOTA FINAL FOI {mediaTotal.ToString("F1")} VOCÊ ESTÁ DE RECUPERAÇÃO!!");
+                Console.WriteLine("VOCÊ ESTÁ DE RECUPERAÇÃO!!");
             }
-
         }
+
     }
 }
