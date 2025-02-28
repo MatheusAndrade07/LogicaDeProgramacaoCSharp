@@ -36,6 +36,26 @@ namespace CSharp.EstruturaCondicional
             {
                 Console.WriteLine("VOCÊ ESTÁ DE RECUPERAÇÃO!!");
             }
+
+        }
+        public static void VerificarNumeroParOuImpar()
+        {
+            Console.Write("DIGITE UM NÚMERO: ");
+            if (int.TryParse(Console.ReadLine(), out int numero))
+            {
+                if (numero % 2 == 0)
+                {
+                    Console.WriteLine("O NÚMERO É PAR!");
+                }
+                else
+                {
+                    Console.WriteLine("O NÚMERO É ÍMPAR!");
+                }
+            }
+            else
+            {
+                Console.WriteLine("ENTRADA INVÁLIDA! DIGITE UM NÚMERO INTEIRO.");
+            }
         }
 
     }
