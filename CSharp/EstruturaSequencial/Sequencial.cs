@@ -9,7 +9,7 @@ namespace CSharp.EstruturaSequencial
 {
     public class Sequencial
     {
-        public static void Ex1061Desafio(string[] args)
+        public static void Ex1061Desafio()
         {
             int W1, X1, Y1, Z1, W2, X2, Y2, Z2, W, X, Y, Z, inicio, fim, duracao, resto;
 
@@ -47,7 +47,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine(Z + " segundo(s)");
         }
 
-        public static void Ex1021Desafio(string[] args)
+        public static void Ex1021Desafio()
         {
             double N;
             int quociente, resto, nota, moeda;
@@ -118,7 +118,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine(resto + " moeda(s) de R$ 0.01");
         }
 
-        public static void Ex1020(string[] args)
+        public static void Ex1020()
         {
             int N, anos, meses, resto, dias;
 
@@ -135,7 +135,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"{meses} mes(es)");
             Console.WriteLine($"{dias} dia(s)");
         }
-        public static void Ex1018(string[] args)
+        public static void Ex1018()
         {
             int N, quociente, resto, nota;
 
@@ -179,7 +179,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex1019(string[] args)
+        public static void Ex1019()
         {
             int N, horas, minutos, segundos, resto;
 
@@ -193,7 +193,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"{horas}:{minutos}:{segundos}");
         }
 
-        public static void Ex1015(string[] args)
+        public static void Ex1015()
         {
             double x1, x2, y1, y2, distancia;
             string[] coletarDistanciaX, coletarDistanciaY;
@@ -213,7 +213,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine(distancia.ToString("F4", CultureInfo.InvariantCulture));
         }
 
-        public static void Ex1013(string[] args)
+        public static void Ex1013()
         {
             int valorA, valorB, valorC, maiorValorAB, maiorValorTotal;
 
@@ -230,7 +230,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"{maiorValorTotal} eh o maior");
         }
 
-        public static void Ex1012(string[] args)
+        public static void Ex1012()
         {
             double A, B, C, areaTriangulo, areaCirculo, areaTrapezio, areaQuadrado, areaRetangulo, valorPi;
             string[] vetor;
@@ -258,7 +258,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex1011(string[] args)
+        public static void Ex1011()
         {
             double resultadoVolume, raioEsfera, pi;
 
@@ -271,7 +271,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"VOLUME = {resultadoVolume}");
         }
 
-        public static void Ex1009(string[] args)
+        public static void Ex1009()
         {
             string nomeFuncionario;
             double salarioFixo, vendaEfetuadasEmDinheiro, comissaoFuncionario, totalSalario;
@@ -287,7 +287,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"TOTAL = R$ {totalSalario.ToString("F2", CultureInfo.InvariantCulture)}");
         }
 
-        public static void NomeIdadeParalela(string[] args)
+        public static void NomeIdadeParalela()
         {
             string nome1, nome2;
             int idade1, idade2;
@@ -309,7 +309,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void ExParalelo(string[] args)
+        public static void ExParalelo()
         {
             double baseRetangulo, alturaRetangulo, areaRetangulo, perimetroRetangulo, diagonalRetangulo;
 
@@ -325,7 +325,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"DIAGONAL = {diagonalRetangulo.ToString("F4", CultureInfo.InvariantCulture)}");
         }
 
-        public static void Ex117(string[] args)
+        public static void Ex117()
         {
             int tempoViagem, mediaKmPorHora, distancia;
             double litros;
@@ -340,7 +340,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"{litros.ToString("F3", CultureInfo.InvariantCulture)}");
         }
 
-        public static void Ex116(string[] args)
+        public static void Ex116()
         {
             int distanciaKm, tempoKm;
 
@@ -351,7 +351,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"{tempoKm} minutos");
         }
 
-        public static void Ex114(string[] args)
+        public static void Ex114()
         {
             int distanciaPercorridaKM;
             double totalCombustivelGasto, quilometrosPorLitro;
@@ -365,7 +365,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex110(string[] args)
+        public static void Ex110()
         {
             int codigoPeca1, codigoPeca2, numeroPeca1, numeroPeca2;
             double valorPeca1, valorPeca2, precoTotal;
@@ -386,7 +386,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"VALOR TOTAL A PAGAR: R$ {precoTotal.ToString("F2")}", CultureInfo.InvariantCulture);
         }
 
-        public static void Ex108(string[] args)
+        public static void Ex108()
         {
             int numeroFuncionario, horasTrabalhadas;
             double salario, valorHoras;
@@ -401,7 +401,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"SALARY = U$ {salario.ToString("F2")}");
         }
 
-        public static void Ex107(string[] args)
+        public static void Ex107()
         {
             int A, B, C, D, diferenca;
 
@@ -416,7 +416,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex106(string[] args)
+        public static void Ex106()
         {
             double notaA, notaB, notaC, mediaNotas, pesoA, pesoB, pesoC;
 
@@ -434,7 +434,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex105(string[] args)
+        public static void Ex105()
         {
             double A, B, mediaNotas, pesoA, pesoB;
 
@@ -451,7 +451,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex104(string[] args)
+        public static void Ex104()
         {
             int PROD, produto1, produto2;
 
@@ -463,7 +463,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"PROD = {PROD}");
         }
 
-        public static void Ex103(string[] args)
+        public static void Ex103()
         {
             int A, B, SOMA;
 
@@ -476,7 +476,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex102(string[] args)
+        public static void Ex102()
         {
             double area, raio, n;
 
@@ -490,7 +490,7 @@ namespace CSharp.EstruturaSequencial
         }
 
 
-        public static void Ex101(string[] args)
+        public static void Ex101()
         {
             int A, B, X;
 
@@ -502,13 +502,13 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"X = {X}");
         }
 
-        public static void Ex100(string[] args)
+        public static void Ex100()
         {
             Console.WriteLine("Hello World!");
         }
 
 
-        public static void Ex1008(string[] args)
+        public static void Ex1008()
         {
             int numeroFuncionario, horasTrabalhadas;
             double salarioFuncionario, valorHora;
@@ -523,7 +523,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"SALARY = U$ {salarioFuncionario.ToString("F2", CultureInfo.InvariantCulture)}");
         }
 
-        public static void Ex1007(string[] args)
+        public static void Ex1007()
         {
             int A, B, C, D, Diferenca;
 
@@ -538,7 +538,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex1004(string[] args)
+        public static void Ex1004()
         {
             int produto1, produto2, PROD;
 
@@ -551,7 +551,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"PROD = {PROD}");
         }
 
-        public static void Ex1003(string[] args)
+        public static void Ex1003()
         {
             int A, B;
 
@@ -561,7 +561,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine(A + B);
         }
 
-        public static void Ex1002(string[] args)
+        public static void Ex1002()
         {
             double n, area, raio;
 
@@ -575,7 +575,7 @@ namespace CSharp.EstruturaSequencial
 
         }
 
-        public static void Ex1001(string[] args)
+        public static void Ex1001()
         {
             int A, B, X;
 
@@ -587,7 +587,7 @@ namespace CSharp.EstruturaSequencial
             Console.WriteLine($"X = {X}");
         }
 
-        public static void EstruturaSquencial(string[] args)
+        public static void EstruturaSquencial()
         {
             double comprimentoTerreno, larguraTerreno, precoMetro, valorTerreno, areaTerreno;
 
