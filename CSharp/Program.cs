@@ -12,7 +12,7 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            Condicional.ExParaleloEC(args);
+            Condicional.ExercicioParaleloSimples();
         }
     }
 }

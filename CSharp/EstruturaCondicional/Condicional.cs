@@ -58,5 +58,54 @@ namespace CSharp.EstruturaCondicional
             }
         }
 
+        public static void ExercicioParaleloSimples() 
+        {
+            double notaPrimeiroSemestre, notaSegundoSemestre, mediaTotal;
+            string[] notas = new string[2];
+
+            Console.WriteLine("Digite suas duas notas, escreva a do seu primeiro semestre e em seguida o do segundo!");
+            notas = Console.ReadLine().Split(' ');
+
+            notaPrimeiroSemestre = double.Parse(notas[0]);
+            notaSegundoSemestre = double.Parse(notas[1]);
+
+            mediaTotal = (notaPrimeiroSemestre + notaSegundoSemestre) / 2.0;
+
+            if (mediaTotal >= 60)
+            {
+                Console.WriteLine($"Parabéns você está aprovado! sua média no final foi {mediaTotal}");
+            }
+            else if (mediaTotal < 60)
+            {
+                Console.WriteLine($"Infelizmente você está reprovado sua média total foi {mediaTotal}");
+            }
+        }
+        public static void Bhaskara() 
+        {
+            double a, b, c, delta, r1, r2;
+            String[] vetor;
+
+            vetor = Console.ReadLine().Split(' ');
+
+            a = double.Parse(vetor[0]);
+            b = double.Parse(vetor[1]);
+            c = double.Parse(vetor[2]);
+
+            delta = Math.Pow(b, 2.0) - 4 * a * c;
+
+            if (a == 0 || delta < 0.0) 
+            {
+                Console.WriteLine("Impossivel calcular");
+            }
+            else
+            {
+                r1 = (-b + Math.Sqrt(delta)) / (2.0 * a);
+                r2 = (-b - Math.Sqrt(delta)) / (2.0 * a);
+
+                Console.WriteLine($"R1 = {r1.ToString("F5")}");
+                Console.WriteLine($"R2 = {r2.ToString("F5")}");
+            }
+        }
+
     }
 }
