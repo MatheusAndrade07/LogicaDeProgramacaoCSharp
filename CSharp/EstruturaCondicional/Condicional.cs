@@ -130,5 +130,25 @@ namespace CSharp.EstruturaCondicional
                 Console.WriteLine($"MENOR = {c}");
             }
         }
+        public static void ContaTelefonica() 
+        {
+            int minutosDeLigacao;
+            double valorConta, custoTotal;
+
+            valorConta = 50.0;
+
+            Console.WriteLine("Digite quantos minutos de ligação você realizou! ");
+            minutosDeLigacao = int.Parse(Console.ReadLine());
+
+            if (minutosDeLigacao < 100) 
+            {
+                Console.WriteLine($"Valor a pagar: R$ 50.00");
+            }
+            else 
+            {
+                custoTotal = valorConta + (minutosDeLigacao - 100) * 2.0;
+            }
+        }
+
     }
 }
