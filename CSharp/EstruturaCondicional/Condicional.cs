@@ -58,7 +58,7 @@ namespace CSharp.EstruturaCondicional
             }
         }
 
-        public static void ExercicioParaleloSimples() 
+        public static void ExercicioParaleloSimples()
         {
             double notaPrimeiroSemestre, notaSegundoSemestre, mediaTotal;
             string[] notas = new string[2];
@@ -80,10 +80,10 @@ namespace CSharp.EstruturaCondicional
                 Console.WriteLine($"Infelizmente você está reprovado sua média total foi {mediaTotal}");
             }
         }
-        public static void Bhaskara() 
+        public static void Bhaskara()
         {
             double a, b, c, delta, r1, r2;
-            String[] vetor;
+            string[] vetor;
 
             vetor = Console.ReadLine().Split(' ');
 
@@ -93,7 +93,7 @@ namespace CSharp.EstruturaCondicional
 
             delta = Math.Pow(b, 2.0) - 4 * a * c;
 
-            if (a == 0 || delta < 0.0) 
+            if (a == 0 || delta < 0.0)
             {
                 Console.WriteLine("Impossivel calcular");
             }
@@ -106,6 +106,29 @@ namespace CSharp.EstruturaCondicional
                 Console.WriteLine($"R2 = {r2.ToString("F5")}");
             }
         }
+        public static void MenorNumero()
+        {
+            int a, b, c;
+            string[] vetor;
 
+            vetor = Console.ReadLine().Split(' ');
+
+            a = int.Parse(vetor[0]);
+            b = int.Parse(vetor[1]);
+            c = int.Parse(vetor[2]);
+
+            if (a < b && a < c)
+            {
+                Console.WriteLine($"MENOR = {a}");
+            }
+            else if (b < c) 
+            {
+                Console.WriteLine($"MENOR = {b}");
+            }
+            else 
+            {
+                Console.WriteLine($"MENOR = {c}");
+            }
+        }
     }
 }

@@ -335,7 +335,7 @@ namespace CSharp.EstruturaSequencial
 
             distancia = tempoViagem * mediaKmPorHora;
 
-            litros = (double)distancia / 12.0;
+            litros = (double) distancia / 12.0;
 
             Console.WriteLine($"{litros.ToString("F3", CultureInfo.InvariantCulture)}");
         }
