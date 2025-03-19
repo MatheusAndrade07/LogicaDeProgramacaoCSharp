@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace CSharp.EstruturaCondicional
 {
@@ -133,7 +134,7 @@ namespace CSharp.EstruturaCondicional
         public static void ContaTelefonica() 
         {
             int minutosDeLigacao;
-            double valorConta, custoTotal;
+            double valorConta;
 
             valorConta = 50.0;
 
@@ -146,7 +147,9 @@ namespace CSharp.EstruturaCondicional
             }
             else 
             {
-                custoTotal = valorConta + (minutosDeLigacao - 100) * 2.0;
+                valorConta += (minutosDeLigacao - 100) * 2.0;
+
+                Console.WriteLine($"Valor a pagar: R$ {valorConta.ToString("F2", CultureInfo.InvariantCulture)}");
             }
         }
 
