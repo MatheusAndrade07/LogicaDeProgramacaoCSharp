@@ -9,6 +9,69 @@ namespace CSharp.EstruturaCondicional
 {
     public class Condicional
     {
+        public static void Ex1039()
+        {
+            decimal precoCachorroQuente = 4.00m, precoXSalada = 4.50m, precoXBacon = 5.00m,
+                precoTorradaSimples = 2.0m, precoRefrigerante = 1.50m, preco = 0.0m, total = 0.0m;
+            int codigo, quantidade;
+
+            string[] vetor;
+
+            vetor = Console.ReadLine().Split(' ');
+
+            codigo = int.Parse(vetor[0]);
+            quantidade = int.Parse(vetor[1]);
+
+
+            switch (codigo) 
+            {
+                case 1:
+                    preco = precoCachorroQuente;
+                    break;
+                case 2:
+                    preco = precoXSalada;
+                    break;
+                case 3:
+                    preco = precoXBacon;
+                    break;
+                case 4:
+                    preco = precoTorradaSimples;
+                    break;
+                case 5:
+                    preco = precoRefrigerante;
+                    break;
+                default:
+                    Console.WriteLine("Insira um valor válido!!");
+                    return;
+            }
+
+            total = quantidade * preco;
+
+            Console.WriteLine($"Total: R$ {total.ToString("F2")}");            
+        }
+
+        public static void Ex1035()
+        {
+            int A, B, C, D;
+            string[] vetor;
+
+            vetor = Console.ReadLine().Split(' ');
+
+            A = int.Parse(vetor[0]);
+            B = int.Parse(vetor[1]);
+            C = int.Parse(vetor[2]);
+            D = int.Parse(vetor[3]);
+
+            if (B > C && D > A && C + D > A + B && C > 0 && D > 0 && A % 2 == 0)
+            {
+                Console.WriteLine("Valores aceitos");
+            }
+            else 
+            {
+                Console.WriteLine("Valores nao aceitos");
+            }
+
+        }
         public static void ExParaleloEC()
         {
             double notaPrimeiroSemestre, notaSegundoSemestre, mediaTotal;
