@@ -9,6 +9,101 @@ namespace CSharp.EstruturaCondicional
 {
     public class Condicional
     {
+        public static void Ex1048() 
+        {
+            decimal salario, reajuste = 0.0m, diferenca;
+
+            salario = decimal.Parse(Console.ReadLine());
+            if (salario <= 400.00m)
+            {
+                reajuste = salario + (salario * 0.15m);
+                diferenca = reajuste - salario;
+
+                Console.WriteLine($"Novo salario: {reajuste.ToString("F2")}");
+                Console.WriteLine($"Reajuste ganho: {diferenca.ToString("F2")}");
+                Console.WriteLine("Em percentual: 15 %");
+            }
+            else if (salario >= 400.01m && salario <= 800.00m) 
+            {
+                reajuste = salario + (salario * 0.12m);
+                diferenca = reajuste - salario;
+
+                Console.WriteLine($"Novo salario: {reajuste.ToString("F2")}");
+                Console.WriteLine($"Reajuste ganho: {diferenca.ToString("F2")}");
+                Console.WriteLine("Em percentual: 12 %");
+            }
+            else if (salario >= 800.01m && salario <= 1200.00m)
+            {
+                reajuste = salario + (salario * 0.10m);
+                diferenca = reajuste - salario;
+
+                Console.WriteLine($"Novo salario: {reajuste.ToString("F2")}");
+                Console.WriteLine($"Reajuste ganho: {diferenca.ToString("F2")}");
+                Console.WriteLine("Em percentual: 10 %");
+            }
+            else if (salario >= 1200.01m && salario <= 2000.00m)
+            {
+                reajuste = salario + (salario * 0.07m);
+                diferenca = reajuste - salario;
+
+                Console.WriteLine($"Novo salario: {reajuste.ToString("F2")}");
+                Console.WriteLine($"Reajuste ganho: {diferenca.ToString("F2")}");
+                Console.WriteLine("Em percentual: 7 %");
+            }
+            else if (salario > 2000.00m)
+            {
+                reajuste = salario + (salario * 0.04m);
+                diferenca = reajuste - salario;
+
+                Console.WriteLine($"Novo salario: {reajuste.ToString("F2")}");
+                Console.WriteLine($"Reajuste ganho: {diferenca.ToString("F2")}");
+                Console.WriteLine("Em percentual: 4 %");
+            }
+
+        }
+
+        public static void Ex1046() 
+        {
+            int horaInicial, horaFinal, duracao;
+            string[] vetor;
+
+            vetor = Console.ReadLine().Split(' ');
+
+            horaInicial = int.Parse(vetor[0]);
+            horaFinal = int.Parse(vetor[1]);
+
+            if (horaFinal > horaInicial) 
+            {
+                duracao = horaFinal - horaInicial;
+
+                Console.WriteLine($"O JOGO DUROU {duracao} HORA(S)");
+            }
+            else if (horaFinal <= horaInicial) 
+            {
+                duracao = (24 - horaInicial) + horaFinal;
+                Console.WriteLine($"O JOGO DUROU {duracao} HORA(S)");
+            }
+
+        }
+        public static void Ex1044() 
+        {
+            int A = 0, B = 0;
+            string[] vetor;
+
+            vetor = Console.ReadLine().Split(' ');
+            A = int.Parse(vetor[0]);
+            B = int.Parse(vetor[1]);
+
+            if (A % B == 0 || B % A == 0)
+            {
+                Console.WriteLine("Sao Multiplos");
+            }
+            else 
+            {
+                Console.WriteLine("Nao sao Multiplos");
+            }
+
+        }
         public static void Ex1039()
         {
             decimal precoCachorroQuente = 4.00m, precoXSalada = 4.50m, precoXBacon = 5.00m,

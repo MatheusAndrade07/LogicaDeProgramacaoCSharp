@@ -12,7 +12,7 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            Condicional.MenorNumero();
+            Condicional.Ex1048();
         }
     }
 }
