@@ -10,6 +10,269 @@ namespace CSharp.EstruturaCondicional
 {
     public class Condicional
     {
+        public static void Ex1051() 
+        {
+            double salario = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            double imposto;
+            if (salario <= 2000.0)
+            {
+                imposto = 0.0;
+            }
+            else if (salario <= 3000.0)
+            {
+                imposto = (salario - 2000.0) * 0.08;
+            }
+            else if (salario <= 4500.0)
+            {
+                imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+            }
+            else
+            {
+                imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+            }
+
+            if (imposto == 0.0)
+            {
+                Console.WriteLine("Isento");
+            }
+            else
+            {
+                Console.WriteLine("R$ " + imposto.ToString("F2", CultureInfo.InvariantCulture));
+            }
+        }
+        public static void Ex1049() 
+        {
+            string palavra1 = Console.ReadLine();
+            string palavra2 = Console.ReadLine();
+            string palavra3 = Console.ReadLine();
+
+            if (palavra1 == "vertebrado")
+            {
+                if (palavra2 == "ave")
+                {
+                    if (palavra3 == "carnivoro")
+                    {
+                        Console.WriteLine("aguia");
+                    }
+                    else
+                    {
+                        Console.WriteLine("pomba");
+                    }
+                }
+                else
+                {
+                    if (palavra3 == "onivoro")
+                    {
+                        Console.WriteLine("homem");
+                    }
+                    else
+                    {
+                        Console.WriteLine("vaca");
+                    }
+                }
+            }
+            else
+            {
+                if (palavra2 == "inseto")
+                {
+                    if (palavra3 == "hematofago")
+                    {
+                        Console.WriteLine("pulga");
+                    }
+                    else
+                    {
+                        Console.WriteLine("lagarta");
+                    }
+                }
+                else
+                {
+                    if (palavra3 == "hematofago")
+                    {
+                        Console.WriteLine("sanguessuga");
+                    }
+                    else
+                    {
+                        Console.WriteLine("minhoca");
+                    }
+                }
+            }
+        }
+        public static void Ex1047()
+        {
+            string[] valores = Console.ReadLine().Split(' ');
+
+            int horaInicial = int.Parse(valores[0]);
+            int minutoInicial = int.Parse(valores[1]);
+            int horaFinal = int.Parse(valores[2]);
+            int minutoFinal = int.Parse(valores[3]);
+
+            int instanteInicial = horaInicial * 60 + minutoInicial;
+            int instanteFinal = horaFinal * 60 + minutoFinal;
+
+            int duracao;
+            if (instanteInicial < instanteFinal)
+            {
+                duracao = instanteFinal - instanteInicial;
+            }
+            else
+            {
+                duracao = (24 * 60 - instanteInicial) + instanteFinal;
+            }
+
+            int duracaoHoras = duracao / 60;
+            int duracaoMinutos = duracao % 60;
+
+            Console.WriteLine("O JOGO DUROU " + duracaoHoras + " HORA(S) E " + duracaoMinutos + " MINUTO(S)");
+        }        
+        public static void Ex1045() 
+        {
+            string[] valores = Console.ReadLine().Split(' ');
+            double n1 = double.Parse(valores[0], CultureInfo.InvariantCulture);
+            double n2 = double.Parse(valores[1], CultureInfo.InvariantCulture);
+            double n3 = double.Parse(valores[2], CultureInfo.InvariantCulture);
+
+            double A, B, C;
+
+            if (n1 > n2 && n1 > n3)
+            {
+                A = n1;
+                if (n2 > n3)
+                {
+                    B = n2;
+                    C = n3;
+                }
+                else
+                {
+                    B = n3;
+                    C = n2;
+                }
+            }
+            else if (n2 > n3)
+            {
+                A = n2;
+                if (n1 > n3)
+                {
+                    B = n1;
+                    C = n3;
+                }
+                else
+                {
+                    B = n3;
+                    C = n1;
+                }
+            }
+            else
+            {
+                A = n3;
+                if (n1 > n2)
+                {
+                    B = n1;
+                    C = n2;
+                }
+                else
+                {
+                    B = n2;
+                    C = n1;
+                }
+            }
+
+            if (A >= B + C)
+            {
+                Console.WriteLine("NAO FORMA TRIANGULO");
+            }
+            else
+            {
+                if (A * A == B * B + C * C)
+                {
+                    Console.WriteLine("TRIANGULO RETANGULO");
+                }
+                else if (A * A > B * B + C * C)
+                {
+                    Console.WriteLine("TRIANGULO OBTUSANGULO");
+                }
+                else
+                {
+                    Console.WriteLine("TRIANGULO ACUTANGULO");
+                }
+
+                if (A == B && B == C)
+                {
+                    Console.WriteLine("TRIANGULO EQUILATERO");
+                }
+                else if (A == B || A == C || B == C)
+                {
+                    Console.WriteLine("TRIANGULO ISOSCELES");
+                }
+            }
+
+            if (A >= B + C)
+            {
+                Console.WriteLine("NAO FORMA TRIANGULO");
+            }
+            else
+            {
+                if (A * A == B * B + C * C)
+                {
+                    Console.WriteLine("TRIANGULO RETANGULO");
+                }
+                else if (A * A > B * B + C * C)
+                {
+                    Console.WriteLine("TRIANGULO OBTUSANGULO");
+                }
+                else
+                {
+                    Console.WriteLine("TRIANGULO ACUTANGULO");
+                }
+
+                if (A == B && B == C)
+                {
+                    Console.WriteLine("TRIANGULO EQUILATERO");
+                }
+                else if (A == B || A == C || B == C)
+                {
+                    Console.WriteLine("TRIANGULO ISOSCELES");
+                }
+            }
+        }
+        public static void Ex1041()
+        {
+            decimal x, y;
+            string[] valoresXeY;
+
+            valoresXeY = Console.ReadLine().Split(' ');
+            x = decimal.Parse(valoresXeY[0]);
+            y = decimal.Parse(valoresXeY[1]);
+
+            if (x == 0.0m && y == 0.0m)
+            {
+                Console.WriteLine("Origem");
+            }
+            else if (x == 0.0m)
+            {
+                Console.WriteLine("Eixo Y");
+            }
+            else if (y == 0.0m)
+            {
+                Console.WriteLine("Eixo X");
+            }
+            else if (x > 0.0m && y > 0.0m)
+            {
+                Console.WriteLine("Q1");
+            }
+            else if (x < 0.0m && y > 0.0m)
+            {
+                Console.WriteLine("Q2");
+            }
+            else if (x < 0.0m && y < 0.0m)
+            {
+                Console.WriteLine("Q3");
+            }
+            else
+            {
+                Console.WriteLine("Q4");
+            }
+        }
         public static void Ex1040() 
         {
             float N1, N2, N3, N4, media, notaExame, mediaFinal;
@@ -58,9 +321,7 @@ namespace CSharp.EstruturaCondicional
                 }
                 Console.WriteLine("Media final: " + mediaFinal.ToString("F1", CultureInfo.InvariantCulture));
             }
-        }
-
-        
+        }        
         public static void Ex1037() 
         {
             double valorEntrada;
@@ -88,7 +349,6 @@ namespace CSharp.EstruturaCondicional
                 Console.WriteLine("Intervalo (75,100]");
             }
         }
-
         public static void Ex1048() 
         {
             decimal salario, reajuste = 0.0m, diferenca;
@@ -141,7 +401,6 @@ namespace CSharp.EstruturaCondicional
             }
 
         }
-
         public static void Ex1046() 
         {
             int horaInicial, horaFinal, duracao;
@@ -224,7 +483,6 @@ namespace CSharp.EstruturaCondicional
 
             Console.WriteLine($"Total: R$ {total.ToString("F2")}");            
         }
-
         public static void Ex1035()
         {
             int A, B, C, D;
@@ -296,7 +554,6 @@ namespace CSharp.EstruturaCondicional
                 Console.WriteLine("ENTRADA INVÁLIDA! DIGITE UM NÚMERO INTEIRO.");
             }
         }
-
         public static void ExercicioParaleloSimples()
         {
             double notaPrimeiroSemestre, notaSegundoSemestre, mediaTotal;
@@ -390,6 +647,5 @@ namespace CSharp.EstruturaCondicional
                 Console.WriteLine($"Valor a pagar: R$ {valorConta.ToString("F2", CultureInfo.InvariantCulture)}");
             }
         }
-
     }
 }
