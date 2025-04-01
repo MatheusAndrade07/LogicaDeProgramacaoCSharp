@@ -8,6 +8,63 @@ namespace CSharp.EstruturaRepetitiva
 {
     public class Repetitiva
     {
+        public static void Ex1134() 
+        {
+            int alcool = 0;
+            int gasolina = 0;
+            int diesel = 0;
+
+            int tipo = int.Parse(Console.ReadLine());
+
+            while (tipo != 4)
+            {
+                if (tipo == 1)
+                {
+                    alcool += 1;
+                }
+                else if (tipo == 2)
+                {
+                    gasolina += 1;
+                }
+                else if (tipo == 3)
+                {
+                    diesel += 1;
+                }
+
+                tipo = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("MUITO OBRIGADO");
+            Console.WriteLine($"Alcool: {alcool}");
+            Console.WriteLine($"Gasolina: {gasolina}");
+            Console.WriteLine($"Diesel: {diesel}");
+        }
+        public static void Ex1117() 
+        {
+            double primeiraNota, segundaNota, media;
+
+            primeiraNota = double.Parse(Console.ReadLine());
+            
+            while (primeiraNota < 0.0 || primeiraNota > 10.0)
+            {
+                Console.WriteLine("nota invalida");
+
+                primeiraNota = double.Parse(Console.ReadLine());                
+            }
+
+            segundaNota = double.Parse(Console.ReadLine());
+
+            while (segundaNota < 0.0 || segundaNota > 10.0)
+            {
+                Console.WriteLine("nota invalida");
+
+                segundaNota = double.Parse(Console.ReadLine());
+            }
+            media = (primeiraNota + segundaNota) / 2.0;
+
+            Console.WriteLine($"media = {media.ToString("F2")}");
+
+        }
         public static void Ex1115() 
         {
             int x, y;
