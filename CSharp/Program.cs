@@ -4,6 +4,7 @@ using System.Data;
 using System.Globalization;
 using CSharp.EstruturaSequencial;
 using CSharp.EstruturaCondicional;
+using CSharp.EstruturaRepetitiva;
 
 
 namespace CSharp
@@ -12,7 +13,7 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            Condicional.Ex1048();
+            Repetitiva.Ex1115();
         }
     }
 }
