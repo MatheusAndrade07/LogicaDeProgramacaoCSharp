@@ -13,7 +13,7 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            Repetitiva.Ex1134();
+            Repetitiva.Ex1154();
         }
     }
 }

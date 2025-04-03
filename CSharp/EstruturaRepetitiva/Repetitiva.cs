@@ -8,6 +8,62 @@ namespace CSharp.EstruturaRepetitiva
 {
     public class Repetitiva
     {
+
+        public static void Ex1131()
+        {
+            int N;
+            while (true)
+            {
+                N = int.Parse(Console.ReadLine());
+
+                if (N == 0)
+                    break;
+
+                for (int m = 1; m <= N; m++)
+                {
+                    int[] regioes = new int[N];
+                    for (int i = 0; i < N; i++)
+                    {
+                        regioes[i] = i + 1;
+                    }
+
+                    int atual = 0;
+                    int desligadas = 0;
+
+                    while (desligadas < N - 1)
+                    {
+                        atual = (atual + m - 1) % (N - desligadas);
+                        regioes[atual] = 0;
+                        desligadas++;
+                    }
+
+                    if (regioes[atual] == 13)
+                    {
+                        Console.WriteLine(m);
+                        break;
+                    }
+                }
+            }
+        }
+        public static void Ex1154() 
+        {
+            int idade, cont, soma;
+            double media;
+
+            cont = 0;
+            soma = 0;
+
+            idade = int.Parse(Console.ReadLine());
+
+            while (idade >= 0) 
+            {
+                soma += idade;
+                cont += 1;
+                idade = int.Parse(Console.ReadLine());
+            }
+            media = (double) soma / cont;
+            Console.WriteLine($"{media.ToString("F2")}");
+        }
         public static void Ex1134() 
         {
             int alcool = 0;
