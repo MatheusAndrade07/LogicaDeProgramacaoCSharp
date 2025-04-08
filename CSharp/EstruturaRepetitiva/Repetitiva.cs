@@ -8,6 +8,18 @@ namespace CSharp.EstruturaRepetitiva
 {
     public class Repetitiva
     {
+        public static void Ex1078() 
+        {
+            int n, resultado;
+
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= 10 ; i++) 
+            {
+                resultado = n * i;
+                Console.WriteLine($"{i} x {n} = {resultado}");
+            }
+        }
         public static void ExParaleloPara() 
         {
             int n, soma = 0;
