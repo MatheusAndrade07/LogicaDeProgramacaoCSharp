@@ -8,6 +8,51 @@ namespace CSharp.EstruturaRepetitiva
 {
     public class Repetitiva
     {
+        public static void ExParaleloDoWhile()
+        {
+            double C, F;
+            char repetir;
+
+            do
+            {
+                Console.Write("Descreva a temperatura em Celsius: ");
+                C = double.Parse(Console.ReadLine());
+                F = 9.0 * C / 5.0 + 32.0;
+                Console.WriteLine($"Equivalente em Fahreinheit: {F.ToString("F2")}");
+                Console.Write("Deseja repetir (s/n)?");
+                repetir = char.Parse(Console.ReadLine());
+            }
+            while (repetir == 's');
+        }
+        public static void Ex1071() 
+        {
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+
+            int min, max;
+            if (x < y)
+            {
+                min = x;
+                max = y;
+            }
+            else
+            {
+                min = y;
+                max = x;
+            }
+
+            int soma = 0;
+            for (int i = min + 1; i < max; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    soma = soma + i;
+                }
+            }
+
+            Console.WriteLine(soma);
+        }
+        
         public static void Ex1078() 
         {
             int n, resultado;
