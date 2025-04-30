@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,167 @@ namespace CSharp.EstruturaRepetitiva
 {
     public class Repetitiva
     {
+        public static void Ex1094()
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            int coelhos = 0;
+            int ratos = 0;
+            int sapos = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+
+                string[] valores = Console.ReadLine().Split(' ');
+                int quantia = int.Parse(valores[0]);
+                char tipo = char.Parse(valores[1]);
+
+                if (tipo == 'C')
+                {
+                    coelhos = coelhos + quantia;
+                }
+                else if (tipo == 'R')
+                {
+                    ratos = ratos + quantia;
+                }
+                else
+                {
+                    sapos = sapos + quantia;
+                }
+            }
+
+            int total = coelhos + ratos + sapos;
+            double porcentagemCoelhos = (double)coelhos / total * 100.0;
+            double porcentagemRatos = (double)ratos / total * 100.0;
+            double porcentagemSapos = (double)sapos / total * 100.0;
+
+            Console.WriteLine($"Total: {total} cobaias");
+            Console.WriteLine($"Total de coelhos: {coelhos}");
+            Console.WriteLine($"Total de ratos: {ratos}");
+            Console.WriteLine($"Total de sapos: {sapos}");
+            Console.WriteLine($"Percentual de coelhos: {porcentagemCoelhos:F2} %");
+            Console.WriteLine($"Percentual de ratos: {porcentagemRatos:F2} %");
+            Console.WriteLine($"Percentual de sapos: {porcentagemSapos:F2} %");
+        }
+        public static void Ex1080() 
+        {
+            int maior = int.Parse(Console.ReadLine());
+            int posicao = 1;
+
+            for (int i = 2; i <= 100; i++)
+            {
+                int x = int.Parse(Console.ReadLine());
+                if (x > maior)
+                {
+                    maior = x;
+                    posicao = i;
+                }
+            }
+            Console.WriteLine(maior);
+            Console.WriteLine(posicao);
+        }
+        public static void Ex1079() 
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+
+                string[] line = Console.ReadLine().Split(' ');
+                double a = double.Parse(line[0], CultureInfo.InvariantCulture);
+                double b = double.Parse(line[1], CultureInfo.InvariantCulture);
+                double c = double.Parse(line[2], CultureInfo.InvariantCulture);
+
+                double media = (a * 2.0 + b * 3.0 + c * 5.0) / 10.0;
+
+                Console.WriteLine(media.ToString("F1", CultureInfo.InvariantCulture));
+            }
+        }
+        public static void Ex1075() 
+        {
+            int N = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= 10000; i++)
+            {
+                if (i % N == 2)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        public static void Ex1074() 
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+
+                int x = int.Parse(Console.ReadLine());
+
+                if (x == 0)
+                {
+                    Console.WriteLine("NULL");
+                }
+                else if (x > 0)
+                {
+                    if (x % 2 == 0)
+                    {
+                        Console.WriteLine("EVEN POSITIVE");
+                    }
+                    else
+                    {
+                        Console.WriteLine("ODD POSITIVE");
+                    }
+                }
+                else
+                {
+                    if (x % 2 == 0)
+                    {
+                        Console.WriteLine("EVEN NEGATIVE");
+                    }
+                    else
+                    {
+                        Console.WriteLine("ODD NEGATIVE");
+                    }
+                }
+            }
+        }
+        public static void Ex1073()
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 2; i <= n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    int quadrado = i * i;
+                    Console.WriteLine($"{i} ^2 = {quadrado}");
+                }
+            }
+        }
+        public static void Ex1072() 
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            int cont_in = 0;
+            int cont_out = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int x = int.Parse(Console.ReadLine());
+                if (x >= 10 && x <= 20)
+                {
+                    cont_in = cont_in + 1;
+                }
+                else
+                {
+                    cont_out = cont_out + 1;
+                }
+            }
+
+            Console.WriteLine($"{cont_in} in");
+            Console.WriteLine($"{cont_out} out");
+        }
         public static void ExParaleloDoWhile()
         {
             double C, F;
@@ -52,7 +214,18 @@ namespace CSharp.EstruturaRepetitiva
 
             Console.WriteLine(soma);
         }
-        
+        public static void Ex1067()
+        {
+            int x = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= x; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }        
         public static void Ex1078() 
         {
             int n, resultado;
