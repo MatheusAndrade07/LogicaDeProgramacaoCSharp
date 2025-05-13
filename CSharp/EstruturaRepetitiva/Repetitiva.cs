@@ -9,6 +9,110 @@ namespace CSharp.EstruturaRepetitiva
 {
     public class Repetitiva
     {
+        public static void Ex1142()
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            int inicio = 1;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int segundo = inicio + 1;
+                int terceiro = inicio + 2;
+                Console.WriteLine($"{inicio} {segundo} {terceiro} PUM");
+
+                inicio = inicio + 4;
+            }
+        }
+        public static void Ex1133()
+        {
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+
+            if (x > y)
+            {
+                int aux = x;
+                x = y;
+                y = aux;
+            }
+
+            for (int i = x + 1; i < y; i++)
+            {
+                if (i % 5 == 2 || i % 5 == 3)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        public static void Ex1132()
+        {
+            int x = int.Parse(Console.ReadLine());
+            int y = int.Parse(Console.ReadLine());
+
+            int menor = x;
+            int maior = y;
+
+            if (x > y)
+            {
+                menor = y;
+                maior = x;
+            }
+
+            int soma = 0;
+            for (int i = menor; i <= maior; i++)
+            {
+                if (i % 13 != 0)
+                {
+                    soma = soma + i;
+                }
+            }
+
+            Console.WriteLine(soma);
+        }        
+        public static void Ex1116()
+        {
+
+            int n = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < n; i++)
+            {
+
+                string[] line = Console.ReadLine().Split(' ');
+                int x = int.Parse(line[0]);
+                int y = int.Parse(line[1]);
+
+                if (y == 0)
+                {
+                    Console.WriteLine("divisao impossivel");
+                }
+                else
+                {
+                    double div = (double)x / y;
+                    Console.WriteLine(div.ToString("F1", CultureInfo.InvariantCulture);
+                }
+            }
+        }
+        public static void Ex1097()
+        {
+            int j = 7;
+            for (int i = 1; i <= 9; i = i + 2)
+            {
+                Console.WriteLine($"I={i} J={j}");
+                Console.WriteLine($"I={i} J={j - 1}");
+                Console.WriteLine($"I={i} J={j - 2}");
+                j = j + 2;
+            }
+        }
+        public static void Ex1096()
+        {
+            for (int i = 1; i <= 9; i += 2)
+            {
+                for (int j = 7; j >= 5; j--)
+                {
+                    Console.WriteLine($"I={i} J={j}");
+                }
+            }
+        }
         public static void Ex1094()
         {
             int n = int.Parse(Console.ReadLine());
